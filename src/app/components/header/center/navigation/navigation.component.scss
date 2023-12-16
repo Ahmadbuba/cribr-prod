@@ -1,0 +1,109 @@
+.navigations {
+  font-family: Roboto, "sans-seriff";
+
+  display: flex;
+  flex: 0 1 auto;
+  justify-content: space-evenly;
+  align-items: center;
+  border: 1px solid rgb(176, 176, 176);
+  border-radius: 9999px;
+  background-color: #ffffff;
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  padding: 0.2rem 0.6rem;
+  max-width: 100%;
+  // max-width: 90%;
+  // margin: 0 auto;
+  text-align: center;
+  color: rgb(113, 113, 113);
+}
+
+a {
+  text-decoration: none; /* Remove the underline */
+  color: inherit; /* Use the parent element's text color */
+}
+
+.active {
+  text-decoration: underline;
+  text-decoration-style: solid;
+  text-decoration-color: black;
+  text-underline-offset: 0.4rem;
+  text-decoration-thickness: 3px;
+  color: black;
+}
+
+.icon-container {
+  padding: 0 0.4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon {
+  background-color: #7bcfad;
+  color: white;
+  padding: 0.5rem;
+  border-radius: 999px;
+}
+
+.n-btn {
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  //   border: none;
+  background-color: transparent;
+  padding: 0.6rem 0.6rem;
+  border-right: 1px solid gray;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.m-btn {
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  //   border: none;
+  background-color: transparent;
+  padding: 0.4rem 0.1rem;
+  border-right: 1px solid gray;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.btn {
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  //   border: none;
+  background-color: transparent;
+  border-right: 1px solid gray;
+  padding: 0.6rem 0.6rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+@media (min-width: 540px) {
+  .width {
+    max-width: 50%;
+  }
+}
+
+@media (min-width: 720px) {
+  .width {
+    max-width: 40%;
+  }
+}
+
+@media (min-width: 960px) {
+  .width {
+    max-width: 35%;
+  }
+}
+
+@media (min-width: 1140px) {
+  .width {
+    max-width: 25%;
+  }
+}

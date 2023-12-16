@@ -1,0 +1,152 @@
+ion-input.custom {
+  --border-style: 3px solid green;
+}
+
+.tags-heading {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.custom-file-input {
+  display: none;
+}
+
+.boxes {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.box {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 300px;
+  //   margin: 10px;
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  overflow: hidden;
+
+  .btn-container {
+    position: absolute;
+    top: 0;
+    z-index: 10000;
+  }
+}
+
+.label-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.custom-file-input-label {
+  cursor: pointer;
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #f1f1f1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  // display: block;
+  // display: flex;
+  // height: 50px;
+  // align-items: center;
+  // justify-content: center;
+  // flex-grow: 0;
+}
+
+.upload-options {
+  position: relative;
+  height: 40px;
+  background-color: rgb(95, 158, 160);
+  cursor: pointer;
+  overflow: hidden;
+  text-align: center;
+  transition: background-color ease-in-out 150ms;
+
+  & button {
+    background-color: transparent;
+    border: none;
+    z-index: 0;
+    position: absolute;
+    font-weight: 400;
+    font-size: 2.5rem;
+    color: rgba(230, 230, 230, 1);
+    top: calc(50% - 1.5rem);
+    left: calc(50% - 1rem);
+  }
+  // & label {
+  //   display: flex;
+  //   align-items: center;
+  //   width: 100%;
+  //   height: 100%;
+  //   font-weight: 400;
+  //   text-overflow: ellipsis;
+  //   white-space: nowrap;
+  //   cursor: pointer;
+  //   overflow: hidden;
+  //   & button {
+  //     content: "add";
+  //     font-family: "Material Icons";
+  //     position: absolute;
+  //     font-size: 2.5rem;
+  //     color: rgba(230, 230, 230, 1);
+  //     top: calc(50% - 2.5rem);
+  //     left: calc(50% - 1.25rem);
+  //     z-index: 0;
+  //   }
+  //   & span {
+  //     display: inline-block;
+  //     width: 50%;
+  //     height: 100%;
+  //     text-overflow: ellipsis;
+  //     white-space: nowrap;
+  //     overflow: hidden;
+  //     vertical-align: middle;
+  //     text-align: center;
+  //     &:hover i.material-icons {
+  //       color: lightgray;
+  //     }
+  //   }
+  // }
+}
+
+.hide-icon::after {
+  display: none;
+}
+
+.js--image-preview {
+  height: 260px;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  background-color: white;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  &::after {
+    content: "photo_size_select_actual";
+    font-family: "Material Icons";
+    position: relative;
+    font-size: 4.5em;
+    color: rgba(230, 230, 230, 1);
+    top: calc(50% - 3rem);
+    left: calc(50% - 2.25rem);
+    z-index: 0;
+  }
+  &.js--no-default::after {
+    display: none;
+  }
+  &:nth-child(2) {
+    background-image: url("http://bastianandre.at/giphy.gif");
+  }
+}

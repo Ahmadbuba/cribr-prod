@@ -1,0 +1,87 @@
+<ion-grid [fixed]="true">
+  <ion-row>
+    <ion-col
+      *ngFor="let property of allProperties"
+      size="12"
+      size-sm="6"
+      size-md="4"
+      size-lg="3"
+      size-xl="2.4"
+    >
+      <app-card component>
+        <app-carousel [images]="property.images" carousel></app-carousel>
+
+        <div class="card-content" cardcontent>
+          <div class="flex-column">
+            <ion-text color="dark"
+              ><h3
+                class="location-heading"
+                style="
+                  margin-top: 0.5rem !important;
+                  margin-bottom: 0.2rem !important;
+                "
+              >
+                Abuja, Nigeria
+              </h3></ion-text
+            >
+            <ion-text color="medium">
+              <h5
+                class="description-heading"
+                style="
+                  margin-top: 0 !important;
+                  margin-bottom: 0.4rem !important;
+                "
+              >
+                Single room self contain
+              </h5>
+            </ion-text>
+            <div
+              style="
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+              "
+            >
+              <div class="flex">
+                <ion-text color="dark"
+                  ><h6
+                    class="price"
+                    style="
+                      margin-top: 0 !important;
+                      margin-bottom: 0 !important;
+                    "
+                  >
+                    N1,200,000
+                  </h6>
+                </ion-text>
+                <div
+                  style="
+                    padding: 0.2rem 0.4rem;
+                    background-color: #385f78;
+                    border-radius: 20%;
+                  "
+                >
+                  <ion-text color="light">
+                    <p
+                      class="year"
+                      style="margin-block-start: 0.4em; margin-block-end: 0.2em"
+                    >
+                      PER/YR
+                    </p>
+                  </ion-text>
+                </div>
+              </div>
+              <div class="flex">
+                <span>4.4</span>
+                <ion-icon name="star-sharp"></ion-icon>
+              </div>
+            </div>
+          </div>
+        </div>
+      </app-card>
+    </ion-col>
+  </ion-row>
+</ion-grid>
+<app-footer-nav></app-footer-nav>
+<!-- Here's a small text description for the card content. Nothing more,
+          nothing less. -->

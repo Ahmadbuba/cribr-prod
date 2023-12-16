@@ -1,0 +1,75 @@
+ion-toolbar {
+  //   --background: white;
+}
+
+ion-content {
+  --background: white;
+}
+
+.nav-container {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+button.filter-btn {
+  display: none;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+ion-item {
+  margin: 1rem 0;
+}
+
+ion-textarea {
+  --padding-start: 1rem;
+  --padding-bottom: 1rem;
+  --padding-top: 1rem;
+  --padding-end: 1rem;
+}
+
+.price {
+  margin: 0 1rem;
+  border: 1px solid black;
+}
+
+.padding {
+}
+
+.filter-container {
+  height: 100%;
+  width: 80%;
+  margin: 0 auto;
+  //   border: 2px solid red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (min-width: 720px) {
+  .nav-container {
+    gap: 1rem;
+  }
+
+  ion-modal {
+    --height: 80%;
+  }
+
+  button.filter-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    // padding: 0.3rem 1.5rem;
+    border-radius: 9999px;
+    // border-top-left-radius: 21px;
+    // border-top-right-radius: 21px;
+    // border-bottom-left-radius: 21px;
+    // border-bottom-right-radius: 21px;
+  }
+}

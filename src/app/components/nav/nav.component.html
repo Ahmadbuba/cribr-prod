@@ -1,0 +1,104 @@
+<div class="main">
+  <!-- <button (click)="scroll('left')" class="scroll-button">←</button> -->
+  <div class="sub-main">
+    <a class="link" *ngFor="let icon of iconNames; let first = first">
+      <span class="material-symbols-outlined">{{ icon.name }}</span>
+      <span [class.active]="first">{{ icon.description }}</span>
+    </a>
+  </div>
+
+  <!-- <button (click)="scroll('right')" class="scroll-button">→</button> -->
+</div>
+<!-- <ion-grid class="ion-padding">
+  <ion-row>
+    <ion-col size="12" size-sm="6">
+      <button class="swiper-button-prev" (click)="onSlidePrev()" type="button">
+        Previous
+      </button>
+      <swiper-container
+        #swiperEx
+        [slidesPerView]="3"
+        [keyboard]="true"
+        [navigation]="navigation"
+      >
+        <swiper-slide
+          *ngFor="let icon of iconNames; let first = first"
+          [class.active]="first"
+          ><a class="link">
+            <span class="material-symbols-outlined">{{ icon.name }}</span>
+            <span>{{ icon.description }}</span>
+          </a></swiper-slide
+        >
+        <swiper-slide>2</swiper-slide>
+        <swiper-slide>3</swiper-slide>
+        <swiper-slide>4</swiper-slide>
+      </swiper-container>
+      <button class="swiper-button-next" (click)="onSlideNext()" type="button">
+        Next
+      </button>
+    </ion-col>
+  </ion-row>
+</ion-grid> -->
+<!-- <div class="container">
+  <div class="carousel-container">
+    <button class="swiper-button-prev" (click)="onSlidePrev()" type="button">
+      Previous
+    </button>
+    <swiper-container
+      #swiperEx
+      [slidesPerView]="slidePerView"
+      [keyboard]="true"
+      pagination-type="fraction"
+      [navigation]="navigation"
+    >
+      <swiper-slide>1</swiper-slide>
+      <swiper-slide>2</swiper-slide>
+      <swiper-slide>3</swiper-slide>
+      <swiper-slide>4</swiper-slide>
+    </swiper-container>
+    <button class="swiper-button-next" (click)="onSlideNext()" type="button">
+      Next
+    </button>
+  </div>
+</div> -->
+
+<!-- size-lg="3" size-xl="2.4" -->
+
+<!-- <svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 32 32"
+  aria-hidden="true"
+  role="presentation"
+  focusable="false"
+  style="
+    display: block;
+    fill: none;
+    height: 12px;
+    width: 12px;
+    stroke: currentcolor;
+    stroke-width: 5.33333;
+    overflow: visible;
+  "
+>
+  <path fill="none" d="m12 4 11.3 11.3a1 1 0 0 1 0 1.4L12 28"></path>
+</svg> -->
+
+<!-- <svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 32 32"
+  aria-hidden="true"
+  role="presentation"
+  focusable="false"
+  style="
+    display: block;
+    fill: none;
+    height: 12px;
+    width: 12px;
+    stroke: currentcolor;
+    stroke-width: 5.33333;
+    overflow: visible;
+  "
+>
+  <path fill="none" d="M20 28 8.7 16.7a1 1 0 0 1 0-1.4L20 4"></path>
+</svg> -->
+<!-- </div> -->

@@ -1,0 +1,70 @@
+ion-content {
+  //   box-sizing: border-box;
+  //   height: 100%;
+  //   display: flex;
+  //   align-items: center;
+  //   justify-content: center;
+}
+
+ion-col {
+  //   display: flex;
+  //   justify-content: center;
+  //   align-items: center;
+}
+
+ion-grid {
+  //   --ion-grid-width: 80%;
+
+  //   --ion-grid-width-xs: 80%;
+  //   --ion-grid-width-sm: 288px;
+  //   --ion-grid-width-md: 384px;
+  //   --ion-grid-width-lg: 480px;
+  //   --ion-grid-width-xl: 570px;
+  height: 100%;
+  overflow: hidden;
+
+  //   margin-top: 10%;
+  //   margin-bottom: 30%;
+
+  //   @media (min-width: 768px) {
+  //     // height: 40%;
+  //     // margin-top: 30%;
+  //     // margin-bottom: 30%;
+  //   }
+}
+
+// ion-row {
+//   height: 100%;
+// }
+
+// ion-col {
+//   height: 90%;
+// }
+
+.campus-image {
+  display: none;
+}
+
+.campusImage-container {
+  display: none;
+}
+
+.home-link {
+  padding: 1rem;
+}
+
+@media (min-width: 768px) {
+  .campusImage-container {
+    display: block;
+    // height: 85vh;
+    width: 100%;
+    // border: 1px solid red;
+  }
+
+  .campus-image {
+    display: block;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+}

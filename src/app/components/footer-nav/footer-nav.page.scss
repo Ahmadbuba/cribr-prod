@@ -1,0 +1,36 @@
+ion-grid {
+  background-color: rgb(247, 247, 247);
+  background-attachment: scroll;
+}
+
+ion-col {
+  color: #222222;
+  padding: 0 1.5rem;
+  text-size-adjust: 100%;
+  display: flex;
+
+  flex-direction: column;
+  align-items: center;
+}
+
+ul {
+  // margin: 0;
+  // padding: 0;
+  list-style-type: none;
+  font-weight: 400;
+
+  font-size: 14px;
+  line-break: strict;
+  line-height: 20px;
+  -webkit-font-smoothing: antialiased;
+  li {
+    padding-bottom: 12px;
+  }
+}
+
+h3 {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 12px;
+  text-align: center;
+}

@@ -1,0 +1,24 @@
+<ion-grid [fixed]="true">
+  <ion-row>
+    <ion-col>
+      <ion-grid>
+        <ion-row class="ion-align-items-center ion-justify-content-center">
+          <ion-col><ion-datetime presentation="date"></ion-datetime></ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-col>
+    <ion-col>
+      <ion-grid>
+        <ion-row class="ion-align-items-center ion-justify-content-center">
+          <ion-col>
+            <ion-datetime
+              presentation="date"
+              [value]="nextDay"
+              [highlightedDates]="highlightedDays"
+            ></ion-datetime
+          ></ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-col>
+  </ion-row>
+</ion-grid>

@@ -1,0 +1,220 @@
+@import "/src/variables";
+
+.header {
+  width: 100%;
+  margin: 0 auto;
+  padding: 1.5rem 0;
+  // @include flexRowJustify(space-between);
+  @include flexRowJustify(center);
+}
+
+.header img {
+  display: none;
+}
+
+.search-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.searchbar-container {
+  width: 95%;
+}
+
+.filter-btn-container {
+  // margin-bottom: 1rem;
+  // margin-right: 1rem;
+}
+
+ion-col {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+ion-button {
+  --padding-top: 0.3rem;
+  --padding-bottom: 0.3rem;
+  --padding-start: 0.3rem;
+  --padding-end: 0.3rem;
+
+  // display: flex;
+  // justify-content: center;
+  // align-items: center;
+}
+
+button.filter-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border-top-left-radius: 21px;
+  border-top-right-radius: 21px;
+  border-bottom-left-radius: 21px;
+  border-bottom-right-radius: 21px;
+}
+
+.right-navigation {
+  @include flexRowJustify(space-between);
+}
+
+.btn-group {
+  display: none;
+}
+
+.btn-one {
+  background: transparent;
+  cursor: pointer;
+
+  text-align: inherit;
+  color: #fefffe;
+  background-color: #7bcfad;
+  border: 1px solid #979797;
+  border-radius: 9999px;
+  transition: box-shadow 0.2s cubic-bezier(0.2, 0, 0, 1);
+}
+
+.btn-two {
+  @include flexRowJustify(space-between);
+
+  border: 1px solid #979797;
+  border-radius: 9999px;
+  background-color: #ffffff;
+  text-align: inherit;
+  cursor: pointer;
+  transition: box-shadow 0.2s cubic-bezier(0.2, 0, 0, 1);
+}
+
+.margin-left {
+  margin-left: 0;
+}
+
+// .width {
+//   max-width: 95%;
+//   margin: 0 auto;
+// }
+// @media (max-width: 720px) {
+//   .header {
+//   }
+
+//   .left-btns {
+//     display: none;
+//   }
+// }
+
+ion-searchbar {
+  --border-radius: 9999px;
+  width: 100%;
+}
+
+@media (min-width: 540px) {
+  .header {
+    width: 95%;
+  }
+
+  .width {
+    max-width: 50%;
+  }
+}
+
+@media (min-width: 720px) {
+  .header {
+    width: 90%;
+    @include flexRowJustify(space-between);
+  }
+
+  ion-button {
+    display: none;
+  }
+
+  .margin-left {
+    margin-left: 1rem;
+  }
+
+  .searchbar-container {
+    width: 100%;
+  }
+  button.filter-btn {
+    display: none;
+  }
+
+  .header img {
+    display: block;
+  }
+
+  .width {
+    max-width: 40%;
+  }
+
+  .btn-group {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+  }
+
+  .btn-one {
+    padding: 1rem 1.4rem;
+  }
+
+  .btn-two {
+    gap: 0.6rem;
+    padding: 1rem 1.4rem;
+  }
+}
+
+@media (min-width: 960px) {
+  .header {
+    width: 85%;
+  }
+
+  .margin-left {
+    margin-left: 3rem;
+  }
+  .width {
+    max-width: 35%;
+  }
+
+  .btn-group {
+    display: flex;
+    align-items: center;
+    gap: 0.9rem;
+  }
+
+  .btn-one {
+    padding: 1rem 1.3rem;
+  }
+
+  .btn-two {
+    gap: 0.6rem;
+    padding: 1rem 1.5rem;
+  }
+}
+
+@media (min-width: 1140px) {
+  .header {
+    width: 80%;
+  }
+  .margin-left {
+    margin-left: 2.5rem;
+  }
+  .width {
+    max-width: 25%;
+  }
+
+  .btn-group {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+  }
+
+  .btn-one {
+    padding: 1rem 1.6rem;
+  }
+
+  .btn-two {
+    gap: 0.5rem;
+    padding: 1rem 1.5rem;
+  }
+}

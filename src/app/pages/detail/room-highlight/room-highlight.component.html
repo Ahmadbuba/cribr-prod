@@ -1,0 +1,19 @@
+<ion-grid [fixed]="true">
+  <ion-row>
+    <ion-col size="12" size-md="8">
+      <h2 class="text-black-h2">Where you will sleep</h2>
+    </ion-col>
+    <ion-col size="12" size-md="8">
+      <div class="boxes">
+        <div class="box" *ngFor="let review of reviews">
+          <ion-icon name="bed-outline"></ion-icon>
+          <div class="h2-text-1">Bedroom</div>
+          <div class="text-2">1 queen bed</div>
+        </div>
+      </div>
+      <div
+        style="width: 100%; border-top: 1px solid #d4d4d4; margin: 1rem 0"
+      ></div>
+    </ion-col>
+  </ion-row>
+</ion-grid>

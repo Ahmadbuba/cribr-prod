@@ -1,0 +1,91 @@
+<div class="header">
+  <img src="../../assets/images/header/cribr.png" width="90" />
+  <!-- <div class="search-container" *ngIf="showSearch"> -->
+  <!-- <div class="searchbar-container"> -->
+  <ion-grid *ngIf="showSearch" class="ion-no-padding">
+    <ion-row
+      class="ion-no-padding ion-align-items-center ion-justify-content-around"
+    >
+      <ion-col size="10" size-lg="6"
+        ><ion-searchbar
+          show-clear-button="always"
+          value="Search"
+          (ionClear)="onShowNavigation()"
+          class="margin-left"
+        ></ion-searchbar
+      ></ion-col>
+      <!-- </div> -->
+      <!-- <div class="filter-btn-container" (click)="openFilterModal()"> -->
+      <ion-col size="2" size-md="0"
+        ><ion-button
+          fill="outline"
+          size="small"
+          color="medium"
+          (click)="openFilterModal()"
+        >
+          <ion-icon
+            slot="icon-only"
+            name="filter-circle"
+          ></ion-icon> </ion-button
+      ></ion-col>
+    </ion-row>
+  </ion-grid>
+  <!-- </div> -->
+  <!-- </div> -->
+
+  <app-navigation *ngIf="!showSearch" (show)="onShowSearch()"></app-navigation>
+  <div class="btn-group">
+    <button type="button" class="btn-one">SELL</button>
+    <button id="popover-button" type="button" class="btn-two">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 32 32"
+        aria-hidden="true"
+        role="presentation"
+        focusable="false"
+        style="
+          fill: none;
+          height: 20px;
+          width: 20px;
+          stroke: #ff385c;
+          stroke-width: 3;
+          overflow: visible;
+        "
+      >
+        <g fill="none"><path d="M2 16h28M2 24h28M2 8h28"></path></g>
+      </svg>
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 32 32"
+        aria-hidden="true"
+        role="presentation"
+        focusable="false"
+        style="height: 20px; width: 20px; fill: #ff385c"
+      >
+        <path
+          d="M16 .7C7.56.7.7 7.56.7 16S7.56 31.3 16 31.3 31.3 24.44 31.3 16 24.44.7 16 .7zm0 28c-4.02 0-7.6-1.88-9.93-4.81a12.43 12.43 0 0 1 6.45-4.4A6.5 6.5 0 0 1 9.5 14a6.5 6.5 0 0 1 13 0 6.51 6.51 0 0 1-3.02 5.5 12.42 12.42 0 0 1 6.45 4.4A12.67 12.67 0 0 1 16 28.7z"
+        ></path>
+      </svg>
+    </button>
+    <ion-popover trigger="popover-button" [dismissOnSelect]="true">
+      <ng-template>
+        <ion-content>
+          <ion-list>
+            <ion-item [button]="true" [detail]="false"
+              ><ion-label>Wishlist</ion-label>
+              <ion-icon name="heart-outline"></ion-icon
+            ></ion-item>
+            <ion-item [button]="true" [detail]="false"
+              ><ion-label>My Ads</ion-label>
+              <ion-icon name="ticket-outline"></ion-icon>
+            </ion-item>
+            <ion-item [button]="true" [detail]="false"
+              ><ion-label>Sell</ion-label>
+              <ion-icon name="cash-outline"></ion-icon>
+            </ion-item>
+          </ion-list>
+        </ion-content>
+      </ng-template>
+    </ion-popover>
+  </div>
+</div>

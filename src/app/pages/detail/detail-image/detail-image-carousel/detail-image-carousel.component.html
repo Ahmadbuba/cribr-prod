@@ -1,0 +1,36 @@
+<!-- <div class="container">
+  <div class="carousel-container">
+    <button class="swiper-button-prev" (click)="onSlidePrev()" type="button">
+      Previous
+    </button>
+    <swiper-container
+      #swiperEx
+      [slidesPerView]="slidePerView"
+      [keyboard]="true"
+      pagination-type="fraction"
+      [navigation]="navigation"
+    >
+      <swiper-slide>1</swiper-slide>
+      <swiper-slide>2</swiper-slide>
+      <swiper-slide>3</swiper-slide>
+      <swiper-slide>4</swiper-slide>
+    </swiper-container>
+    <button class="swiper-button-next" (click)="onSlideNext()" type="button">
+      Next
+    </button>
+  </div>
+</div> -->
+
+<!-- <div class="container"> -->
+<swiper-container
+  #swiperEx
+  [keyboard]="true"
+  [navigation]="true"
+  pagination-type="fraction"
+>
+  <swiper-slide *ngFor="let imageSource of imageSources">
+    <img [src]="imageSource" height="1000" />
+  </swiper-slide>
+  <div class="swiper-pagination"></div>
+</swiper-container>
+<!-- </div> -->

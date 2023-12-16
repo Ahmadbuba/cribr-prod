@@ -1,0 +1,15 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>photos</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-grid>
+    <ion-row class="ion-justify-content-around">
+      <ion-col size="auto" *ngFor="let photo of photos"
+        ><img [src]="photo.thumbnail" alt="" class="gallery_img"
+      /></ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

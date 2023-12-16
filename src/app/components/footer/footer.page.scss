@@ -1,0 +1,34 @@
+.items {
+  width: 80%;
+  margin: 0 auto;
+  // padding: 12px 0;
+  display: flex;
+  justify-content: center;
+  gap: 4rem;
+  align-items: center;
+
+  .item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.45rem;
+    align-items: center;
+
+    svg {
+      color: rgb(176, 176, 176);
+    }
+
+    span {
+      font-family: "Onest", sans-serif;
+      color: #717171;
+      font-size: 10px;
+      font-weight: 600;
+    }
+  }
+}
+
+@media (min-width: 744px) {
+  ion-footer {
+    display: none;
+  }
+}

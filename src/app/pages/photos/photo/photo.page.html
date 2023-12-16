@@ -1,0 +1,14 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>photo</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<div>
+  <swiper-container #swiperEx [keyboard]="true" [navigation]="true">
+    <swiper-slide *ngFor="let imageSource of imageSources">
+      <img [src]="imageSource" height="1000" />
+    </swiper-slide>
+    <div class="swiper-pagination"></div>
+  </swiper-container>
+</div>

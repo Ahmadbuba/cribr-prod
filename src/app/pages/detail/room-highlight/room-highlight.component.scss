@@ -1,0 +1,34 @@
+.text-black-h2 {
+  color: rgb(34, 34, 34);
+  font-weight: 600;
+  font-size: clamp(1.45rem, 1.5vw, 1.5rem);
+  line-height: 2.2rem;
+  letter-spacing: -0.22px;
+  text-size-adjust: 100%;
+}
+.boxes {
+  display: flex;
+  gap: 16px;
+  white-space: nowrap;
+  overflow-x: auto;
+  flex-wrap: nowrap;
+  overflow-y: scroll;
+}
+.box {
+  margin: 16px 0;
+  border: 1px solid #222222;
+  border-radius: 12px;
+  padding: 24px;
+}
+.h2-text-1 {
+  font-weight: 600;
+  font-size: clamp(1rem, 1.2vw, 1.1rem);
+  line-height: 1.25rem;
+  color: rgb(34, 34, 34);
+}
+.text-2 {
+  font-weight: 400;
+  color: rgb(113, 113, 113);
+  font-size: clamp(0.85rem, 1.5vw, 0.9rem);
+  line-height: 1.25rem;
+}

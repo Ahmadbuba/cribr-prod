@@ -1,0 +1,123 @@
+@import "/src/variables";
+.main {
+  font-family: Onest, "sans-serif";
+  font-weight: 600;
+  letter-spacing: 0.1;
+  font-size: 14px;
+  z-index: 100;
+  width: 95%;
+  overflow-x: scroll;
+  margin: 0 auto;
+  padding: 0.6rem 0;
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+
+  // display: flex;
+  // align-items: center;
+  // justify-content: center;
+}
+
+ion-col {
+  // margin: 0 auto;
+  display: flex;
+
+  align-items: center;
+}
+
+swiper-container {
+  // font-family: Onest, "sans-serif";
+  // z-index: 100;
+  font-size: 8px;
+  display: flex;
+  align-items: center;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  background-color: #ccc;
+}
+
+// .swiper-button-next {
+//   position: absolute;
+//   top: 40%;
+//   left: 80%;
+// }
+
+// .swiper-button-prev {
+//   position: absolute;
+//   top: 40%;
+//   right: 80%;
+// }
+
+.swiper-button-prev {
+}
+
+.swiper-button-disabled {
+  display: none;
+}
+
+.material-symbols-outlined {
+  font-size: 30px;
+}
+
+.link {
+  margin: 0 0.6rem;
+  @include flexColumnJustify(space-between);
+  color: rgb(113, 113, 113);
+}
+
+.link span.active {
+  color: black !important;
+  text-decoration: underline;
+  text-decoration-style: solid;
+  text-decoration-color: black;
+  text-underline-offset: 0.4rem;
+  text-decoration-thickness: 3px;
+  color: black;
+}
+
+.sub-main {
+  display: flex;
+  align-items: center;
+}
+
+.main::-webkit-scrollbar {
+  display: none;
+}
+
+.scroll-button {
+  background: transparent;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  outline: none;
+}
+
+// @media (min-width: 720px) {
+//   .main {
+//     width: 53%;
+//   }
+// }
+
+// @media (min-width: 960px) {
+//   .main {
+//     width: 40%;
+//     // padding: 0.8rem 0;
+//   }
+// }
+
+@media (min-width: 1140px) {
+  .main {
+    width: 100%;
+  }
+}
+
+// a {
+//   text-decoration: none; /* Remove the underline */
+//   color: inherit; /* Use the parent element's text color */
+// }
+
+// .active {
+
+// }

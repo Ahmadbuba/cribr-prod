@@ -1,0 +1,12 @@
+.flex {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-left: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .flex {
+    gap: 0.4rem;
+  }
+}

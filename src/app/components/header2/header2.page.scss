@@ -1,0 +1,85 @@
+@import "/src/variables";
+
+ion-searchbar {
+  --border-radius: 9999px;
+}
+
+.header {
+  width: 100%;
+  @include flexRowJustify(center);
+}
+
+.header img {
+  display: none;
+}
+
+.btn-group {
+  display: none;
+}
+
+@media (min-width: 540px) {
+  .width {
+    max-width: 50%;
+  }
+}
+
+@media (min-width: 720px) {
+  .header {
+    @include flexRowJustify(space-between);
+  }
+
+  .header img {
+    display: block;
+  }
+
+  .width {
+    max-width: 40%;
+  }
+
+  .btn-group {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  .btn-one {
+    background: transparent;
+    cursor: pointer;
+    padding: 1rem 1.8rem;
+    text-align: inherit;
+    color: #fefffe;
+    background-color: #7bcfad;
+    border: 1px solid #979797;
+    border-radius: 9999px;
+    transition: box-shadow 0.2s cubic-bezier(0.2, 0, 0, 1);
+  }
+
+  .btn-two {
+    @include flexRowJustify(space-between);
+    gap: 0.6rem;
+    padding: 1rem 1.8rem;
+    border: 1px solid #979797;
+    border-radius: 9999px;
+    background-color: #ffffff;
+    text-align: inherit;
+    cursor: pointer;
+    transition: box-shadow 0.2s cubic-bezier(0.2, 0, 0, 1);
+  }
+}
+
+@media (min-width: 960px) {
+  .header {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .width {
+    max-width: 35%;
+  }
+}
+
+@media (min-width: 1140px) {
+  .width {
+    max-width: 25%;
+  }
+}

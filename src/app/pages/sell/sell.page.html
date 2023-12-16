@@ -1,0 +1,216 @@
+<!-- <ion-header [translucent]="true">
+  <ion-toolbar class="ion-padding">
+    <a class="home-link" href="">
+      <img src="../../../assets/images/header/cribr.png" />
+    </a>
+  </ion-toolbar>
+</ion-header> -->
+
+<ion-content class="ion-no-padding" [fullscreen]="true">
+  <ion-grid [fixed]="true">
+    <ion-row class="ion-justify-content-center">
+      <ion-col>
+        <a class="home-link" href="" style="margin-bottom: 1rem">
+          <img src="../../../assets/images/header/cribr.png" /> </a
+      ></ion-col>
+    </ion-row>
+    <form [formGroup]="sellForm">
+      <ion-row class="ion-align-items-center ion-justify-content-center">
+        <ion-col size="12"
+          ><ion-list>
+            <ion-item>
+              <ion-input
+                label="Title"
+                labelPlacement="floating"
+                placeholder="Title summarising what you want to sell"
+                formControlName="title"
+              ></ion-input>
+            </ion-item> </ion-list
+        ></ion-col>
+      </ion-row>
+      <ion-row class="ion-align-items-center ion-justify-content-center">
+        <ion-col size="12"
+          ><ion-list>
+            <ion-item>
+              <ion-input
+                label="University"
+                labelPlacement="floating"
+                placeholder="University nearest to it or target University"
+                formControlName="university"
+              ></ion-input>
+            </ion-item> </ion-list
+        ></ion-col>
+      </ion-row>
+      <ion-row class="ion-align-items-center ion-justify-content-center">
+        <ion-col size="12"
+          ><ion-list>
+            <ion-item>
+              <ion-input
+                label="Address"
+                labelPlacement="floating"
+                placeholder="Enter address of property"
+                formControlName="address"
+              ></ion-input>
+            </ion-item> </ion-list
+        ></ion-col>
+      </ion-row>
+      <ion-row class="ion-align-items-center ion-justify-content-around">
+        <ion-col size="12" size-md="5">
+          <ion-list>
+            <ion-item>
+              <ion-input
+                label="Rooms Available"
+                labelPlacement="floating"
+                placeholder="Number of rooms"
+                type="number"
+                formControlName="rooms_available"
+              ></ion-input>
+            </ion-item>
+          </ion-list>
+        </ion-col>
+        <ion-col size="12" size-md="5">
+          <ion-list>
+            <ion-item>
+              <ion-input
+                type=""
+                label="bedroom size"
+                labelPlacement="floating"
+                placeholder="Size of the bedroom"
+                formControlName="bedroom_size_sqm"
+              ></ion-input>
+            </ion-item>
+          </ion-list>
+        </ion-col>
+      </ion-row>
+      <ion-row class="ion-align-items-center ion-justify-content-center">
+        <ion-col size="12" size-md="10">
+          <ion-list>
+            <ion-item>
+              <ion-textarea
+                [autoGrow]="true"
+                label="Description"
+                labelPlacement="floating"
+                placeholder="Good descriptions leads to better sale"
+                formControlName="description"
+              ></ion-textarea>
+            </ion-item>
+          </ion-list>
+        </ion-col>
+      </ion-row>
+
+      <ion-row class="ion-align-items-center ion-justify-content-around">
+        <ion-col size="12" size-md="3">
+          <ion-list>
+            <ion-item>
+              <ion-select
+                label="Ad tier"
+                labelPlacement="stacked"
+                placeholder="Pick Ad tier"
+                formControlName="ad_tier"
+              >
+                <ion-select-option value="Emerald">Emerald</ion-select-option>
+                <ion-select-option value="Gold">Gold</ion-select-option>
+                <ion-select-option value="platinum">Platinum</ion-select-option>
+              </ion-select>
+            </ion-item>
+          </ion-list>
+        </ion-col>
+
+        <ion-col formArrayName="tags" size="12" size-md="9">
+          <!-- <div class="tags-heading">
+            <h1>Tags</h1>
+            <span>(Add Maximum of 5)</span>
+            <ion-button (click)="addNewTagField()"
+              ><ion-icon name="add-outline"></ion-icon
+            ></ion-button>
+          </div> -->
+          <ion-list>
+            <ion-grid>
+              <ion-row>
+                <ion-col
+                  size-md="4"
+                  *ngFor="let tag of getTagsControls().controls; let i = index "
+                  [formGroupName]="i"
+                  ><ion-item>
+                    <ion-input
+                      label=" Add Tag((Maximum of 5))"
+                      labelPlacement="floating"
+                      placeholder="tags make searching your item easier"
+                      formControlName="name"
+                    ></ion-input> </ion-item
+                ></ion-col>
+                <ion-col
+                  ><ion-button (click)="addNewTagField()"
+                    ><ion-icon name="add-outline"></ion-icon></ion-button
+                ></ion-col>
+              </ion-row>
+            </ion-grid>
+          </ion-list>
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col size="12" size="">
+          <div style="display: flex; gap: 1rem; align-items: center">
+            <h1>Images:</h1>
+            <div class="label-container">
+              <label for="images" class="custom-file-input-label"
+                ><span>Add Images</span>
+                <span class="material-symbols-outlined"> library_add </span>
+              </label>
+            </div>
+            <input
+              type="file"
+              multiple
+              accept="image/*"
+              (change)="onImageChange($event)"
+              id="images"
+              class="custom-file-input"
+            /></div
+        ></ion-col>
+      </ion-row>
+      <ion-row class="ion-align-items-center ion-justify-content-around">
+        <ng-container formArrayName="uploaded_images">
+          <ion-col size="12">
+            <ion-grid>
+              <ion-row>
+                <ion-col
+                  size="12"
+                  size-md="4"
+                  size-xl="3"
+                  *ngFor="let image of selectedImages; let i = index"
+                  ><div class="box">
+                    <div
+                      class="js--image-preview"
+                      [style.backgroundImage]="'url(' + image.url + ')'"
+                      [ngClass]="{ 'hide-icon': image.url }"
+                    ></div>
+                    <div class="upload-options">
+                      <button type="button" (click)="removeImage(i)">
+                        <span class="material-symbols-outlined"> close </span>
+                      </button>
+                    </div>
+                  </div></ion-col
+                >
+              </ion-row>
+            </ion-grid>
+          </ion-col>
+
+          <!-- <ion-input
+            class="custom-file-input"
+            type="file"
+            multiple
+            accept="image/*"
+            (ionChange)="onImageChange($event)"
+            formControlName="photo"
+          ></ion-input> -->
+        </ng-container>
+      </ion-row>
+      <ion-row class="ion-align-items-center ion-justify-content-center">
+        <ion-col size="2">
+          <ion-button>Submit</ion-button>
+        </ion-col>
+      </ion-row>
+    </form>
+  </ion-grid>
+</ion-content>

@@ -1,0 +1,102 @@
+<ion-header class="ion-no-border" [myScrollVanish]="scrollArea">
+  <ion-toolbar>
+    <app-header></app-header>
+    <div
+      style="
+        height: 1px;
+        width: 90%;
+        margin: 0 auto;
+        opacity: 0.3;
+        background-color: rgb(113, 113, 113);
+      "
+    ></div>
+    <div class="nav-container">
+      <app-nav></app-nav>
+      <button class="filter-btn" (click)="openModal()">
+        <ion-icon name="filter-circle-outline" size="large"></ion-icon>
+      </button>
+    </div>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content #scrollArea scrollEvents="true" [fullscreen]="">
+  <router-outlet></router-outlet>
+  <ion-modal [isOpen]="isModalOpen">
+    <ng-template>
+      <ion-header>
+        <ion-toolbar>
+          <ion-title>Filter</ion-title>
+          <ion-buttons slot="end">
+            <ion-button (click)="closeModal()">Close</ion-button>
+          </ion-buttons>
+        </ion-toolbar>
+      </ion-header>
+      <ion-content class="ion-padding center">
+        <div class="filter-container">
+          <ion-list>
+            <ion-item>
+              <ion-select
+                aria-label="Category"
+                placeholder="Pick Category"
+                (ionChange)="handleChange($event)"
+                (ionCancel)="handleCancel()"
+                (ionDismiss)="handleDismiss()"
+              >
+                <ion-select-option value="sale">For Sale</ion-select-option>
+                <ion-select-option value="rent">For Rent</ion-select-option>
+                <ion-select-option value="let">Short let</ion-select-option>
+              </ion-select>
+            </ion-item>
+            <div style="margin: 0 1rem">
+              <ion-text>
+                <h2>Price</h2>
+              </ion-text>
+            </div>
+            <ion-item class="price-container">
+              <ion-input
+                label="&#8358;"
+                type="number"
+                placeholder="000"
+                labelPlacement="stacked"
+                class="price"
+              ></ion-input>
+              <div style="margin: 0.5rem 1rem">-</div>
+              <ion-input
+                label="&#8358;"
+                type="number"
+                placeholder="000"
+                labelPlacement="stacked"
+                class="price"
+              ></ion-input>
+            </ion-item>
+
+            <ion-item class="ion-padding">
+              <ion-textarea
+                labelPlacement="floating"
+                fill="outline"
+                label="Location"
+                placeholder="City, State, Street or click button below for your current location"
+              ></ion-textarea>
+            </ion-item>
+
+            <ion-button color="medium" (click)="readLiveLocation()"
+              ><ion-icon slot="start" name="location"></ion-icon>Use Current
+              Location</ion-button
+            >
+            <div class="center" style="padding: 2rem">
+              <ion-button
+                color="success"
+                shape="round"
+                expand="block"
+                fill="outline"
+                >Apply</ion-button
+              >
+            </div>
+          </ion-list>
+        </div>
+      </ion-content>
+    </ng-template>
+  </ion-modal>
+</ion-content>
+
+<app-footer></app-footer>

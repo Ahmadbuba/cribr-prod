@@ -1,0 +1,84 @@
+@import "/src/variables";
+
+// ion-row {
+//   display: flex;
+//   align-items: center;
+// }
+
+// ion-col {
+//   margin: 0 auto;
+// }
+
+.container {
+  width: 95%;
+  margin: 1rem auto;
+  position: relative;
+}
+
+.btn-container-next {
+  position: absolute;
+  right: 5%;
+}
+
+.btn-container-prev {
+}
+
+swiper-container {
+  font-family: Onest, "sans-serif";
+  // z-index: 100;
+  //   width: 100%;
+  font-size: 8px;
+  //   display: flex;
+  //   align-items: center;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  background-color: #ccc;
+}
+
+// .swiper-button-next {
+//   position: absolute;
+//   top: 40%;
+//   left: 80%;
+// }
+
+// .swiper-button-prev {
+//   position: absolute;
+//   top: 40%;
+//   right: 80%;
+// }
+
+.swiper-button-prev {
+}
+
+.swiper-button-disabled {
+  display: none;
+}
+
+.link {
+  //   margin: 0 0.6rem;
+  @include flexColumnJustify(space-between);
+  color: rgb(113, 113, 113);
+}
+
+.link.active {
+  color: black !important;
+}
+
+.sub-main {
+  display: flex;
+  align-items: center;
+}
+
+.main::-webkit-scrollbar {
+  display: none;
+}
+
+.scroll-button {
+  background: transparent;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  outline: none;
+}
